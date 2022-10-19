@@ -46,8 +46,7 @@ func getPage(page int, url string, mainC chan <-[]extractedJob){
 	res, err :=http.Get(pageURL)
 	checkErr(err)
 	checkCode(res)
-	// /page/2?sort=ud&listType=public&public_list_flag=y#searchTitle
-	// https://www.saramin.co.kr/zf_user/jobs/public/list/page/2?sort=ud&listType=public&public_list_flag=y#searchTitle
+
 	defer res.Body.Close()
 
 	doc, err :=goquery.NewDocumentFromReader(res.Body)

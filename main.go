@@ -15,7 +15,7 @@ func handleHome(c echo.Context) error{
 
 func handleScrape(c echo.Context) error{
 	defer os.Remove(fileName)
-	// term:=strings.ToLower(scrapper.CleanString(c.FormValue("term")))
+	
 	scrapper.Scrape()
 	return c.Attachment(fileName, fileName)
 }
