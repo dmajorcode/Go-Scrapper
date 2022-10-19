@@ -18,7 +18,7 @@ type extractedJob struct{
 	summary string
 }
 
-// Scrape Indeed 
+// Scrape Saramin
 func Scrape(){
 	var baseURL string = "https://www.saramin.co.kr/zf_user/jobs/public/list/"
 	var jobs []extractedJob
